@@ -5,6 +5,7 @@ export const state = () => ({
   pageName: '', // nullにするとエラーになる箇所があるので、必ずStringにしておく
   tourName: null,
   autoplay: false,
+  acceptUnoptimizedSP: false, // SPに最適化されていない旨を了承済み
   annotationVisibilities: {
     Annotations: true,
     Viewpoints: true,
@@ -48,6 +49,9 @@ export const mutations = {
   },
   autoplay(state, value) {
     state.autoplay = value
+  },
+  acceptUnoptimizedSP(state, value) {
+    state.acceptUnoptimizedSP = value
   },
   annotationVisibilities(state, { key, value }) {
     switch (key) {
@@ -121,6 +125,9 @@ export const getters = {
   },
   autoplay(state) {
     return state.autoplay
+  },
+  acceptUnoptimizedSP(state) {
+    return state.acceptUnoptimizedSP
   },
   annotationVisibilities(state) {
     return state.annotationVisibilities

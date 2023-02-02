@@ -1,6 +1,6 @@
 <template lang="pug">
 .root
-  SorryScreen(v-if="$device.isMobile")
+  SorryScreen(v-if="!$store.getters.acceptUnoptimizedSP")
   template(v-else)
     main
       splitpanes.default-theme

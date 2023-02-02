@@ -7,11 +7,12 @@
       alt='Incomplete Niwa Archives'
     )
   p.ja
-    | このページはモバイル端末からはご覧になれません。<br>
-    | デスクトップ版 Chrome でご覧ください。
+    | このページはモバイル端末には最適化されていません。<br>
+    | デスクトップ版 Chrome での閲覧を推奨します。
   p.en
-    | You are not accustomed to viewing this page from a mobile device. Please use the desktop version of Chrome.
-  nuxt-link(to="/") Back to top
+    | This page is not optimized for mobile devices. We recommend using the desktop version of Chrome.
+  a(@click="$store.commit('acceptUnoptimizedSP', true)") Accept and force to browse
+  //- nuxt-link(to="/") Back to top
 </template>
 
 <style lang="sass" scoped>
