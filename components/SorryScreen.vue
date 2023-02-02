@@ -8,9 +8,10 @@
     )
   p.ja
     | このページはモバイル端末には最適化されていません。<br>
-    | デスクトップ版 Chrome での閲覧を推奨します。
+    | デスクトップ版 Chrome での閲覧を推奨します。<br>
+    | また、数GBの通信容量を消費する可能性がありますので、モバイル回線での閲覧にはご注意下さい。
   p.en
-    | This page is not optimized for mobile devices. We recommend using the desktop version of Chrome.
+    | This page is not optimized for mobile devices. We recommend using the desktop version of Chrome. Also, please be careful when browsing on a mobile connection as it may consume several GB of communication space.
   a(@click="$store.commit('acceptUnoptimizedSP', true)") Accept and force to browse
   //- nuxt-link(to="/") Back to top
 </template>
