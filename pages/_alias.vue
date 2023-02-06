@@ -9,11 +9,12 @@
         )
           //- TODO 追々対応が確認できたら個々の条件を見直すこと
           .notice(v-if="!$ua.is.chrome && noticeVisibility")
-            | このブラウザは閲覧時に不具合の可能性があります。デスクトップ版
-            ExternalLink(href="https://www.google.com/chrome/") Chrome
-            //- | または
-            //- ExternalLink(href="https://www.mozilla.org/ja/firefox/new/") Firefox
-            | でご覧ください。
+            p
+              | このブラウザは閲覧時に不具合の可能性があります。デスクトップ版
+              ExternalLink(href="https://www.google.com/chrome/") Chrome
+              //- | または
+              //- ExternalLink(href="https://www.mozilla.org/ja/firefox/new/") Firefox
+              | でご覧ください。
             .closeButton(@click="noticeVisibility = false")
               IconClose
           .potree_wrap
@@ -139,8 +140,10 @@ main
           height: 18px
           border-radius: 50%
           display: flex
+          flex-shrink: 0
           justify-content: center
           align-items: center
+          align-self: flex-start
           margin-left: auto
           margin-right: 0
           transition: background-color 0.2s
