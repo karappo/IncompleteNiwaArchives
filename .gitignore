@@ -91,6 +91,7 @@ sw.*
 
 .vscode
 
+_temp/
 static/assets/pointclouds/*
 !static/assets/pointclouds/.gitkeep
 static/assets/sound/*
